@@ -30,12 +30,12 @@ function ItemForm({ initialValues, onSubmit, submitText }) {
     e.preventDefault();
     const { name, category, modelNumber, price, description, imageUrl } = formData;
     onSubmit({
-      name,
-      category,
-      modelNumber,
+      name: name.trim(),
+      category: category.trim(),
+      modelNumber: modelNumber.trim(),
       price: Number(price),
-      description,
-      imageUrl,
+      description: description.trim(),
+      imageUrl: imageUrl.trim(),
     });
   };
 
